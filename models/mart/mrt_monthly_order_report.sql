@@ -34,7 +34,7 @@ FROM sales_database.order_item
 WHERE price > 7000
 )
 SELECT u.order_month,
-COALESCE(u.total_monthly_users,0) AS nb_users_monthly,
+COALESCE(u.total_monthly_users,0) AS total_monthly_users,
 COALESCE(jt.total_monthly_users_from_jawa_timur,0) AS total_monthly_user,
 COALESCE(o.total_monthly_orders,0) AS total_monthly_order
 FROM monthly_users_recap AS u
